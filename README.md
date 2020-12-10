@@ -46,7 +46,7 @@ K Means Clustering Algorithm
 2.	Initialize centroids by first shuffling the dataset and then randomly selecting K data points for the centroids without replacement.
 3.	Keep iterating until there is no change to the centroids. i.e assignment of data points to clusters isn’t changing.
 
-file:///C:/Users/BANSI%20JITENDRA%20PATEL/OneDrive/Desktop/k%20means.png
+
                       K Means Clustering
 
  

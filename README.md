@@ -47,16 +47,16 @@ K Means Clustering Algorithm
 3.	Keep iterating until there is no change to the centroids. i.e assignment of data points to clusters isn’t changing.
 
       ![k means](https://user-images.githubusercontent.com/65363515/101751340-2b6f1c80-3af6-11eb-812c-ae847a0efe4a.png)
+      K Means Clustering
         
 We started with loading all the libraries and dependencies. The columns in the dataset are customer id, gender, age, income and spending score.
- 
+ ![1](https://user-images.githubusercontent.com/65363515/101751915-e13a6b00-3af6-11eb-894e-6dc328510081.png)
 
  We dropped the id column as that does not seem relevant to the context. Also, we plotted the age frequency of customers.
 
 Graph:
- 
 
-
+ ![2](https://user-images.githubusercontent.com/65363515/101751920-e26b9800-3af6-11eb-96be-c9bc6b1f07f8.png)
 
 
 (This thing is perfomed in jupyter notebook. Code for same is attached below)
@@ -72,43 +72,39 @@ plt.show()
 Next we made a box plot of spending score and annual income to better visualize the distribution range. The range of spending score is clearly more than the annual income range.
 
 Box Plot:
- 
+
+ ![3](https://user-images.githubusercontent.com/65363515/101751932-e5ff1f00-3af6-11eb-834a-9976147741db.png)
 
 We made a bar plot to check the distribution of male and female population in the dataset. The female population clearly outweighs the male counterpart.
 
+ Bar Plot:
  
-
-
+ ![4](https://user-images.githubusercontent.com/65363515/101751933-e7c8e280-3af6-11eb-8989-1902e18afc73.png)
 
 
 Next, we made a bar plot to check the distribution of number of customers in each age group. Clearly the 26–35 age group outweighs every other age group.
 
+Bar Plot:
+
+![5](https://user-images.githubusercontent.com/65363515/101751941-e8fa0f80-3af6-11eb-96cd-db0d5ea26a02.png)
  
 
 We continued with making a bar plot to visualize the number of customers according to their spending scores. The majority of the customers have spending score in the range 41–60.
 
- 
-
-
-
-
-
-
-
-
-
-
-
+ ![6](https://user-images.githubusercontent.com/65363515/101751945-ea2b3c80-3af6-11eb-98ef-fc54342906d1.png)
 
 Also, we made a bar plot to visualize the number of customers according to their annual income. The majority of the customers have annual income in the range 60000 and 90000.
 
- 
+![7](https://user-images.githubusercontent.com/65363515/101751948-eb5c6980-3af6-11eb-98d8-d530eeb65f12.png)
+
 
 Next, we plotted Within Cluster Sum Of Squares (WCSS) against the number of clusters (K Value) to figure out the optimal number of clusters value. WCSS measures sum of distances of observations from their cluster centroids which is given by the below formula.
- 
+
+ ![8](https://user-images.githubusercontent.com/65363515/101751961-ee575a00-3af6-11eb-9d74-b25009182c9b.png)
+
 where Yi is centroid for observation Xi. The main goal is to maximize number of clusters and in limiting case each data point becomes its own cluster centroid.
 
- 
+   ![9](https://user-images.githubusercontent.com/65363515/101751965-ef888700-3af6-11eb-9ad5-e965d876d745.png)
  
 The Elbow Method
  
@@ -118,6 +114,7 @@ Finally, we made a 3D plot to visualize the spending score of the customers with
  
 Results
  
+   ![10](https://user-images.githubusercontent.com/65363515/101751971-f1524a80-3af6-11eb-8637-a2bbb7418dbf.png)
  
  
 Conclusions

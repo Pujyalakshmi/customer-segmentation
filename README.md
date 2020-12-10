@@ -46,9 +46,85 @@ K Means Clustering Algorithm
 2.	Initialize centroids by first shuffling the dataset and then randomly selecting K data points for the centroids without replacement.
 3.	Keep iterating until there is no change to the centroids. i.e assignment of data points to clusters isn’t changing.
 
-                     ![k means](https://user-images.githubusercontent.com/65363515/101751340-2b6f1c80-3af6-11eb-812c-ae847a0efe4a.png)
-                      K Means Clustering
+      ![k means](https://user-images.githubusercontent.com/65363515/101751340-2b6f1c80-3af6-11eb-812c-ae847a0efe4a.png)
+        
+We started with loading all the libraries and dependencies. The columns in the dataset are customer id, gender, age, income and spending score.
+ 
 
+ We dropped the id column as that does not seem relevant to the context. Also, we plotted the age frequency of customers.
+
+Graph:
+ 
+
+
+
+
+(This thing is perfomed in jupyter notebook. Code for same is attached below)
+
+data.drop(["CustomerID"], axis = 1, inplace=True)
+plt.figure(figsize=(10,6))
+plt.title("Ages Frequency")
+sns.axes_style("dark")
+sns.violinplot(y=data["Age"])
+plt.show()                                                             
+ 
+
+Next we made a box plot of spending score and annual income to better visualize the distribution range. The range of spending score is clearly more than the annual income range.
+
+Box Plot:
+ 
+
+We made a bar plot to check the distribution of male and female population in the dataset. The female population clearly outweighs the male counterpart.
+
+ 
+
+
+
+
+Next, we made a bar plot to check the distribution of number of customers in each age group. Clearly the 26–35 age group outweighs every other age group.
+
+ 
+
+We continued with making a bar plot to visualize the number of customers according to their spending scores. The majority of the customers have spending score in the range 41–60.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Also, we made a bar plot to visualize the number of customers according to their annual income. The majority of the customers have annual income in the range 60000 and 90000.
+
+ 
+
+Next, we plotted Within Cluster Sum Of Squares (WCSS) against the number of clusters (K Value) to figure out the optimal number of clusters value. WCSS measures sum of distances of observations from their cluster centroids which is given by the below formula.
+ 
+where Yi is centroid for observation Xi. The main goal is to maximize number of clusters and in limiting case each data point becomes its own cluster centroid.
+
+ 
+ 
+The Elbow Method
+ 
+Calculate the Within Cluster Sum of Squared Errors (WSS) for different values of k, and choose the k for which WSS first starts to diminish. In the plot of WSS-versus k, this is visible as an elbow.
+The optimal K value is found to be 5 using the elbow method.
+Finally, we made a 3D plot to visualize the spending score of the customers with their annual income. The data points are separated into 5 classes which are represented in different colours as shown in the 3D plot.
+ 
+Results
+ 
+ 
+ 
+Conclusions
+ 
+K means clustering is one of the most popular clustering algorithms and usually the first thing practitioners apply when solving clustering tasks to get an idea of the structure of the dataset. The goal of K means is to group data points into distinct non-overlapping subgroups. One of the major application, of K means clustering is segmentation of customers to get a better understanding of them which in turn could be used to increase the revenue of the company.
+
+      
  
 
 
